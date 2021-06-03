@@ -35,8 +35,8 @@ namespace UsedCars.Web
             services.AddRazorPages();
             services.AddScoped<TestRepository>();
 
-            //services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-            //    .AddEntityFrameworkStores<ApplicationDbContext>();
+            //services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
+            //    .AddEntityFrameworkStores<UsedCarsContext>();
             services.AddControllersWithViews();
         }
 
@@ -59,8 +59,8 @@ namespace UsedCars.Web
 
             app.UseRouting();
 
-            app.UseAuthentication();
-            app.UseAuthorization();
+            //app.UseAuthentication();
+            //app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
