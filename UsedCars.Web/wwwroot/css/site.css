@@ -59,8 +59,12 @@ html {
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-image: url(../lib/images/Background.jpg);
+    background-repeat: repeat;
 }
 .footer {
   position: absolute;

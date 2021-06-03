@@ -24,7 +24,19 @@ namespace UsedCars.Web.Controllers
         public IActionResult Index()
         {
             var keyboardPrograms = _testRepository.GetAllKeyboardPrograms();
-            return View();
+            List<KeyboardProgramsViewModel> keyboardProgramsViewModel = new List<KeyboardProgramsViewModel>();
+            foreach (var keyboard in keyboardPrograms)
+            {
+                var keyboardModel = new KeyboardProgramsViewModel
+                {
+                    SetlistOrder = keyboard.SetlistOrder.Value,
+                    Title = keyboard.Title,
+                    KorgProgram = keyboard.KorgProgram,
+                    NordProgram = keyboard.NordProgram
+                };
+                keyboardProgramsViewModel.Add(keyboardModel);
+            }
+            return View(keyboardProgramsViewModel);
         }
 
         public IActionResult Privacy()
