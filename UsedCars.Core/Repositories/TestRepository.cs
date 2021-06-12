@@ -3,11 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UsedCars.Core;
 using UsedCars.Core.Entities;
-using UsedCars.Infrastructure;
 
-namespace UsedCars.Infrastructure.Repositories
+namespace UsedCars.Core.Repositories
 {
     public class TestRepository
     {
